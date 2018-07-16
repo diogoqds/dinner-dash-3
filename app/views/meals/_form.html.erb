@@ -17,8 +17,8 @@
 				<%= form.text_field :name, class: "form-control" %>
 			</div>
 			<div class="col">
-				<%= form.label :Categoria, class: "text-muted" %>
-				<%= form.number_field :MealCategory_id, class: "form-control" %>
+				<%= form.label :Categoria, class: "text-muted" %><br>
+				<%= form.select :MealCategory_id, MealCategory.all.map{|c| [c.name, c.id]}, {}, { :class => 'custom-select' } %>
 			</div>
 		</div>
 
